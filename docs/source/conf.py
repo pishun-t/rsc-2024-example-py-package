@@ -1,3 +1,11 @@
+# If extensions (or modules to document with autodoc) are in another directory,
+# add these directories to sys.path here.
+import sys
+import os
+import pathlib
+# sys.path.insert(0, pathlib.Path(__file__).parents[2].resolve().as_posix())
+sys.path.insert(0, os.path.abspath('../../src'))
+
 # Configuration file for the Sphinx documentation builder.
 #
 # For the full list of built-in configuration values, see the documentation:
@@ -18,6 +26,7 @@ extensions = [
     'sphinx.ext.duration',
     'sphinx.ext.doctest',
     'sphinx.ext.autodoc',
+    'sphinx.ext.autosummary',
     'sphinx_rtd_theme', # https://sphinx-rtd-theme.readthedocs.io/en/stable/installing.html
 ]
 
