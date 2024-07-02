@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "civeng"
+version = "0.0.1"
+authors = [
+    {name = "Pishun T", email = "pishun.t@gmail.com"},
+]
+description = "Demo for Imperial Civil Engineering department RSC programme 2024"
+readme = "README.rst"
+requires-python = ">=3.8"
+license = {text = "BSD-3-Clause"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+]
+
+dependencies = [
+    # ... list of dependencies
+    "docutils",
+]
+
+[project.urls]
+Homepage = "https://github.com/pishun-t/rsc-2024-example-py-package"
+Issues = "https://github.com/pishun-t/rsc-2024-example-py-package/issues"
+
+# Option 1: ask setuptools to use default search parameters to find packages
+[tool.setuptools.packages]
+find = {}  # Scan the project directory with the default parameters
+
+# OR
+# Option 2:
+# [tool.setuptools.packages.find]
+# All the following settings are optional:
+# where = ["src"]  # ["."] by default
+# include = ["mypackage*"]  # ["*"] by default
+# exclude = ["mypackage.tests*"]  # empty by default
+# namespaces = false  # true by default
+# ... package discovery details in:
+#     https://setuptools.pypa.io/en/latest/userguide/package_discovery.html#package-discovery
+
+# ... other project metadata fields as listed in:
+#     https://packaging.python.org/en/latest/guides/writing-pyproject-toml/
